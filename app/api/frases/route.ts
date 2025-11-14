@@ -17,12 +17,16 @@ export async function GET() {
     ],
   };
 
-  const tipo = Object.keys(frases);
-  const categoriaAleatoria = tipo[Math.floor(Math.random() * tipo.length)];
-  const fraseAleatoria =
-    frases[categoriaAleatoria][
-      Math.floor(Math.random() * frases[categoriaAleatoria].length)
-    ];
+ const tipo = ["fofas", "cantadas", "motivacionais"] as const;
+
+ const categoriaAleatoria =
+  tipo[Math.floor(Math.random() * tipo.length)];
+
+const fraseAleatoria =
+  frases[categoriaAleatoria][
+    Math.floor(Math.random() * frases[categoriaAleatoria].length)
+  ];
+
 
   return Response.json({
     frase: fraseAleatoria,
