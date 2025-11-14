@@ -34,7 +34,7 @@ export default function Home() {
         animate={{ y: [0, 20, 0] }}
         transition={{ repeat: Infinity, duration: 5 }}
       >
-        💘
+        
       </motion.div>
 
       {/* Título */}
