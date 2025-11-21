@@ -20,7 +20,7 @@ export default function Home() {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center p-6 relative">
 
-      {/* Corações flutuando */}
+    
       <motion.div
         className="absolute top-10 left-10 text-pink-400 text-5xl select-none"
         animate={{ y: [0, -20, 0] }}
@@ -36,8 +36,6 @@ export default function Home() {
       >
         
       </motion.div>
-
-      {/* Título */}
       <motion.h1
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -47,7 +45,6 @@ export default function Home() {
         Frases pra Ayumi 💖
       </motion.h1>
 
-      {/* Botão */}
       <motion.button
         whileTap={{ scale: 0.9 }}
         whileHover={{ scale: 1.05 }}
@@ -57,7 +54,6 @@ export default function Home() {
         {loading ? "Gerando..." : "Gerar frase fofinha 💘"}
       </motion.button>
 
-      {/* Caixa da frase */}
       {frase && (
         <motion.div
           initial={{ opacity: 0, scale: 0.95 }}
